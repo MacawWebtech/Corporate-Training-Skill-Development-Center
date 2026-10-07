@@ -1,0 +1,367 @@
+/* =========================================================
+   RESPONSIVE FIXES — tablet & mobile alignment
+   Loaded LAST on every page so it wins over earlier layers
+   (style.css, qa-theme.css, and each page's inline <style>).
+   ========================================================= */
+
+/* ---------- 1. Floating header: stay inside the viewport ----------
+   It had left/right insets AND width:100%, which made it 16px
+   wider than the screen and pushed it off the right edge. */
+.header {
+  width: auto !important;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+/* ---------- 2. Mobile menu: fully hidden when closed ----------
+   The closed drawer sat at translateX(100%) but its right inset
+   left a ~12px sliver (the yellow outline on the right edge). */
+.mobile-menu {
+  box-sizing: border-box;
+  max-width: calc(100vw - 16px);
+  transition: transform .35s ease, visibility 0s linear .35s !important;
+}
+.mobile-menu:not(.open) {
+  transform: translateX(calc(100% + 32px)) !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu.open {
+  transform: translateX(0) !important;
+  visibility: visible;
+  transition: transform .35s ease, visibility 0s !important;
+}
+[dir="rtl"] .mobile-menu:not(.open) {
+  transform: translateX(calc(-100% - 32px)) !important;
+}
+
+/* ---------- 3. Heroes: grow with their content ----------
+   Every hero had a fixed height + overflow:hidden + vertical
+   centring, so on narrow screens the stacked content was
+   clipped at the top (eyebrow / headline) and bottom (buttons,
+   image). Desktop keeps its intended size via min-height. */
+@media (max-width: 1023px) {
+  .hero-home1.animated-page-hero.page-hero-home,
+  .page-hero-home {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding-top: calc(var(--header-height, 66px) + 2.5rem) !important;
+    padding-bottom: 3.5rem !important;
+    align-items: flex-start !important;
+  }
+
+  .animated-page-hero.page-hero-programs,
+  .animated-page-hero.page-hero-approach,
+  .animated-page-hero.page-hero-clients,
+  .animated-page-hero.page-hero-custom,
+  .animated-page-hero.page-hero-about,
+  .animated-page-hero.page-hero-insights,
+  .page-hero.on-image.animated-page-hero.page-hero-about,
+  .page-hero-programs,
+  .page-hero-approach,
+  .page-hero-clients,
+  .page-hero-custom,
+  .page-hero-about,
+  .page-hero-insights {
+    height: auto !important;
+    min-height: 380px !important;
+    max-height: none !important;
+    padding-top: calc(var(--header-height, 66px) + 2.5rem) !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Hero buttons: equal width, stacked, aligned to the text column */
+  .hero-home1 .flex.gap-3,
+  .animated-page-hero .flex.gap-3 {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 26rem;
+  }
+  .hero-home1 .flex.gap-3 > .btn,
+  .animated-page-hero .flex.gap-3 > .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Centred heroes keep their stacked buttons centred */
+  .hero-home1 .flex.justify-center.gap-3,
+  .animated-page-hero .flex.justify-center.gap-3 {
+    margin-inline: auto;
+  }
+
+  /* hero content spans the full width of the container */
+  .hero-home1 > .container,
+  .animated-page-hero > .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .animated-page-hero.page-hero-programs,
+  .animated-page-hero.page-hero-approach,
+  .animated-page-hero.page-hero-clients,
+  .animated-page-hero.page-hero-custom,
+  .animated-page-hero.page-hero-about,
+  .animated-page-hero.page-hero-insights,
+  .page-hero.on-image.animated-page-hero.page-hero-about,
+  .page-hero-programs,
+  .page-hero-approach,
+  .page-hero-clients,
+  .page-hero-custom,
+  .page-hero-about,
+  .page-hero-insights {
+    min-height: 320px !important;
+  }
+
+  /* Hero image under the copy: sensible fixed ratio instead of 400px */
+  .hero-home1 .image-box,
+  .page-hero-custom .image-box {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+  }
+
+}
+
+/* ---------- 4. Home: category list becomes a scrollable chip row ---------- */
+@media (max-width: 899px) {
+  .category-layout { gap: 1.5rem !important; min-width: 0; }
+  .category-layout > * { min-width: 0; }
+  .cat-sidebar {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: .5rem !important;
+    padding-bottom: .35rem;
+    margin-inline: calc(var(--space-5, 20px) * -1);
+    padding-inline: var(--space-5, 20px);
+    scroll-padding-inline: var(--space-5, 20px);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cat-sidebar::-webkit-scrollbar { display: none; }
+  .cat-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-color: var(--color-gray-200) !important;
+    border-radius: 999px !important;
+  }
+  .cat-btn.active { border-color: var(--color-accent) !important; }
+}
+
+/* ---------- 5. Grids & cards: never wider than their column ---------- */
+@media (max-width: 1023px) {
+  .grid > *,
+  .program-cards > *,
+  [class*="-grid"] > *,
+  [class*="cards"] > * { min-width: 0; }
+
+  img, video, svg, iframe { max-width: 100%; }
+
+  /* Long words / URLs wrap instead of pushing layout */
+  h1, h2, h3, h4, p, li, a, span { overflow-wrap: break-word; }
+
+  /* Wide tables scroll inside their own box */
+  table { display: block; max-width: 100%; overflow-x: auto; }
+}
+
+/* Odd last card in a 2-column tablet grid spans the row
+   instead of leaving an empty cell beside it */
+@media (min-width: 700px) and (max-width: 1099px) {
+  .program-cards > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .program-cards > :last-child:nth-child(odd) .img { min-height: 220px !important; }
+}
+
+/* ---------- 6. Decorative hero motifs stay inside the hero ---------- */
+@media (max-width: 767px) {
+  .hero-motifs { display: none; }
+}
+
+.cat-btn.active,
+.cat-btn:hover { color: #0a0a0a !important; }
+
+/* ---------- 7. Programs page: one category control per breakpoint ----------
+   The sidebar and the mobile <select> were both showing below 900px. */
+@media (max-width: 899px) {
+  .programs-layout .cat-panel { display: none !important; }
+  .programs-layout {
+    padding-top: 2.5rem !important;
+    gap: 1.5rem !important;
+  }
+  .programs-layout > * { min-width: 0; }
+}
+
+/* ---------- 8. Tablet section rhythm ----------
+   Desktop's 6rem top+bottom section padding stacked into ~190px
+   empty bands on tablet (mobile already had reduced spacing). */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+}
+
+/* ---------- Card grids: no orphaned card in the 2-column range ----------
+   Between 641px and 980px .vq-grid drops to 2 columns, so a 3-card grid
+   left the last card alone with an empty cell beside it. A lone last card
+   now spans the full row as a horizontal card (photo left, text right). */
+@media (min-width: 641px) and (max-width: 980px) {
+  main .vq-grid > .vq-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  main .vq-grid > .vq-card:last-child:nth-child(odd) img {
+    width: 50% !important;
+    height: auto !important;
+    min-height: 220px;
+    flex: 0 0 50%;
+  }
+  main .vq-grid > .vq-card:last-child:nth-child(odd) .vq-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Split image + text sections: image matches text height ----------
+   .corp-visual-grid centred the image vertically, so it ended up shorter
+   than the text column beside it. On desktop the image column now
+   stretches to the full height of the copy and the photo covers it. */
+@media (min-width: 851px) {
+  .corp-visual-grid { align-items: stretch !important; }
+  .corp-visual-grid .corp-visual-media { height: auto; min-height: 390px; }
+  .corp-visual-grid .corp-visual-media img {
+    position: absolute !important;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+}
+
+/* =========================================================
+   FOOTER — readable brand copy + clean tablet/mobile layout
+   ========================================================= */
+
+/* Brand paragraph was 55% white; make it solid white everywhere. */
+html body .footer .footer-brand p {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* The yellow glow was clipped by its own box, leaving a hard-edged
+   band behind the logo. closest-side makes it fade out fully. */
+.footer::before {
+  background: radial-gradient(closest-side, rgba(255, 212, 0, .24), transparent) !important;
+}
+
+/* Tablet + mobile */
+@media (max-width: 980px) {
+  html body .footer { padding: 2.5rem 0 1.25rem !important; }
+
+  html body .footer .footer-top {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  html body .footer .footer-brand p {
+    max-width: 420px !important;
+    font-size: .9rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+
+  html body .footer .footer-links-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.5rem 1rem !important;
+    align-items: start !important;
+  }
+  html body .footer .footer-links-row > * { grid-column: auto !important; min-width: 0; }
+  html body .footer .footer-title {
+    font-size: .72rem !important;
+    margin: 0 0 .75rem !important;
+  }
+  html body .footer .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: .6rem !important;
+  }
+  html body .footer .footer-links a {
+    font-size: .875rem !important;
+    line-height: 1.3 !important;
+  }
+
+  html body .footer .footer-newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+    padding: 1.5rem 0 !important;
+    margin: 0 !important;
+    border-top: 1px solid rgba(255, 212, 0, .35) !important;
+  }
+  html body .footer .footer-newsletter h4 { margin: 0 0 .35rem !important; font-size: 1.05rem !important; }
+  html body .footer .footer-newsletter p { margin: 0 !important; max-width: none !important; font-size: .9rem !important; line-height: 1.5 !important; }
+  html body .footer .footer-newsletter-form {
+    display: flex !important;
+    gap: .6rem !important;
+    width: 100% !important;
+    max-width: 480px !important;
+  }
+  html body .footer .footer-newsletter-form input { flex: 1 1 auto !important; min-width: 0 !important; height: 44px !important; }
+  html body .footer .footer-newsletter-form .btn { flex: 0 0 auto !important; height: 44px !important; }
+
+  html body .footer .footer-bottom {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: .75rem 1.5rem !important;
+    padding-top: 1.25rem !important;
+    font-size: .8rem !important;
+  }
+  html body .footer .footer-bottom .flex { gap: 1.5rem !important; }
+}
+
+/* Small phones: two link columns, Programs drops below */
+@media (max-width: 480px) {
+  html body .footer .footer-links-row { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  html body .footer .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  html body .footer .footer-newsletter-form { max-width: none !important; }
+}
+
+/* ---------- Programs: "Your training journey" on tablet ----------
+   Five steps in one row were too cramped between 700px and 1099px.
+   Tablet now shows 3 on top and 2 centred below, with equal heights. */
+@media (min-width: 600px) and (max-width: 1099px) {
+  main .journey-track {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 1.5rem 1.25rem !important;
+    max-width: 760px;
+    margin-inline: auto;
+  }
+  main .journey-track > .journey-step { grid-column: span 2; display: flex; flex-direction: column; }
+  main .journey-track > .journey-step:nth-child(4) { grid-column: 2 / span 2; }
+  main .journey-track > .journey-step:nth-child(5) { grid-column: 4 / span 2; }
+  main .journey-track .journey-card {
+    flex: 1;
+    height: auto !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+  main .journey-track .journey-card h4 { font-size: 1rem !important; margin-bottom: .4rem !important; }
+  main .journey-track .journey-card p { font-size: .875rem !important; line-height: 1.5 !important; margin: 0 !important; }
+}
+/* Mobile: card was height:100% of the step (which includes the number
+   circle), so it overflowed and covered the next step's number. */
+@media (max-width: 599px) {
+  main .journey-track .journey-card { height: auto !important; }
+}

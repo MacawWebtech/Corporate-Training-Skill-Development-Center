@@ -1,0 +1,763 @@
+/* =========================================================
+   Styles moved out of HTML style="" attributes.
+   Each class replaces one unique inline style. The :not(#_s)
+   chain gives them the same priority the inline style had.
+   ========================================================= */
+
+.s-c4ea0b:not(#_s):not(#_s):not(#_s) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+}
+.s-b4cf53:not(#_s):not(#_s):not(#_s) {
+  font-size: 2rem;
+}
+.s-6bdce2:not(#_s):not(#_s):not(#_s) {
+  max-width: 400px;
+}
+.s-1e437a:not(#_s):not(#_s):not(#_s) {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.s-cdfd65:not(#_s):not(#_s):not(#_s) {
+  min-height: 100%;
+  border: none;
+  border-radius: 0;
+}
+.s-f8bbc2:not(#_s):not(#_s):not(#_s) {
+  min-height: 320px;
+}
+.s-7c30ef:not(#_s):not(#_s):not(#_s) {
+  background: var(--color-gray-50);
+}
+.s-ebf168:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 2.5rem;
+}
+.s-3d4947:not(#_s):not(#_s):not(#_s) {
+  padding: 1.75rem;
+}
+.s-329a9c:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 1rem;
+}
+.s-847f17:not(#_s):not(#_s):not(#_s) {
+  min-height: 140px;
+  border-radius: var(--radius-lg);
+}
+.s-3c0170:not(#_s):not(#_s):not(#_s) {
+  padding: 1.5rem;
+  text-align: center;
+}
+.s-753355:not(#_s):not(#_s):not(#_s) {
+  width: 112px;
+  height: 112px;
+  min-height: 112px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+.s-6b71a2:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 2rem;
+}
+.s-23b212:not(#_s):not(#_s):not(#_s) {
+  margin-inline: auto;
+}
+.s-1354ba:not(#_s):not(#_s):not(#_s) {
+  padding-top: calc(var(--header-height) + 3.5rem);
+  text-align: center;
+}
+.s-6b889a:not(#_s):not(#_s):not(#_s) {
+  overflow: hidden;
+  padding: 0;
+}
+.s-15a951:not(#_s):not(#_s):not(#_s) {
+  min-height: 160px;
+  border: none;
+  border-radius: 0;
+}
+.s-34a221:not(#_s):not(#_s):not(#_s) {
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.s-fc2742:not(#_s):not(#_s):not(#_s) {
+  width: 80px;
+  height: 80px;
+  min-height: 80px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+.s-4944a7:not(#_s):not(#_s):not(#_s) {
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
+.s-1b4919:not(#_s):not(#_s):not(#_s) {
+  flex-wrap: wrap;
+  max-width: 420px;
+  margin-inline: auto;
+}
+.s-a7e5d2:not(#_s):not(#_s):not(#_s) {
+  flex: 1;
+  min-width: 200px;
+}
+.s-5d0489:not(#_s):not(#_s):not(#_s) {
+  color: #ffffff !important;
+}
+.s-085186:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: .2rem;
+}
+.s-276a2b:not(#_s):not(#_s):not(#_s) {
+  padding: 1.25rem;
+  text-align: center;
+}
+.s-e36a54:not(#_s):not(#_s):not(#_s) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+  background: transparent;
+  color: var(--color-black);
+}
+.s-cf2fb0:not(#_s):not(#_s):not(#_s) {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 480px;
+  width: 100%;
+}
+.s-55b6e8:not(#_s):not(#_s):not(#_s) {
+  flex: 1;
+  min-width: 220px;
+}
+.s-1952b4:not(#_s):not(#_s):not(#_s) {
+  margin-top: var(--space-10);
+  color: var(--color-gray-600);
+}
+.s-61789d:not(#_s):not(#_s):not(#_s) {
+  padding-bottom: var(--space-12);
+}
+.s-84a2c3:not(#_s):not(#_s):not(#_s) {
+  min-height: 400px;
+  border-radius: var(--radius-xl);
+}
+.s-cfd4b5:not(#_s):not(#_s):not(#_s) {
+  border: 0;
+}
+.s-d59b19:not(#_s):not(#_s):not(#_s) {
+  padding-top: calc(var(--header-height) + 3.5rem);
+}
+.s-5fabce:not(#_s):not(#_s):not(#_s) {
+  min-height: 320px;
+  border-radius: var(--radius-2xl);
+}
+.s-9eb73b:not(#_s):not(#_s):not(#_s) {
+  padding: 1.5rem;
+}
+.s-d8c5b7:not(#_s):not(#_s):not(#_s) {
+  min-height: 280px;
+  border-radius: var(--radius-xl);
+}
+.s-ad9206:not(#_s):not(#_s):not(#_s) {
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+.s-a18642:not(#_s):not(#_s):not(#_s) {
+  flex-wrap: wrap;
+}
+.s-019b32:not(#_s):not(#_s):not(#_s) {
+  position: relative;
+}
+.s-8622cf:not(#_s):not(#_s):not(#_s) {
+  position: relative;
+  z-index: 1;
+}
+.s-1eb311:not(#_s):not(#_s):not(#_s) {
+  max-width: 36rem;
+  margin: 1.25rem auto 0;
+}
+.s-db4a32:not(#_s):not(#_s):not(#_s) {
+  background: rgba(255, 212, 0, 0.2);
+  color: #ffd400;
+  margin-bottom: 1rem;
+}
+.s-a269b8:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-gray-600);
+  font-size: 0.95rem;
+}
+.s-df81f3:not(#_s):not(#_s):not(#_s) {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd400;
+  margin-bottom: 1rem;
+}
+.s-7d7d2f:not(#_s):not(#_s):not(#_s) {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+.s-0ade9a:not(#_s):not(#_s):not(#_s) {
+  min-height: 280px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+}
+.s-7b005d:not(#_s):not(#_s):not(#_s) {
+  max-width: 34rem;
+  margin-top: 1rem;
+}
+.s-466655:not(#_s):not(#_s):not(#_s) {
+  min-height: 400px;
+  border-radius: 24px;
+}
+.s-aca2d9:not(#_s):not(#_s):not(#_s) {
+  min-height: 150px;
+  border: none;
+  border-radius: 0;
+}
+.s-5ab468:not(#_s):not(#_s):not(#_s) {
+  margin-top: auto;
+}
+.s-29ddfe:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 0.5rem;
+}
+.s-873180:not(#_s):not(#_s):not(#_s) {
+  min-height: 180px;
+}
+.s-fc5466:not(#_s):not(#_s):not(#_s) {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.s-2a65b7:not(#_s):not(#_s):not(#_s) {
+  width: 64px;
+  height: 64px;
+  min-height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.s-b847b5:not(#_s):not(#_s):not(#_s) {
+  padding-top: 0;
+}
+.s-77bf60:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-accent);
+}
+.s-4774f2:not(#_s):not(#_s):not(#_s) {
+  text-align: center;
+  padding-bottom: var(--space-12);
+}
+.s-b9fd24:not(#_s):not(#_s):not(#_s) {
+  max-width: 800px;
+}
+.s-640601:not(#_s):not(#_s):not(#_s) {
+  min-height: 280px;
+  margin-top: var(--space-10);
+  border-radius: 2rem;
+}
+.s-1541be:not(#_s):not(#_s):not(#_s) {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-gray-200);
+  transform: translateX(-50%);
+  display: none;
+}
+.s-0925b0:not(#_s):not(#_s):not(#_s) {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+.s-28bbfa:not(#_s):not(#_s):not(#_s) {
+  text-align: right;
+}
+.s-312c2a:not(#_s):not(#_s):not(#_s) {
+  min-height: 200px;
+  border-radius: 1rem 2rem 1rem 2rem;
+}
+.s-8365e6:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: var(--space-12);
+}
+.s-87ebb8:not(#_s):not(#_s):not(#_s) {
+  min-height: 200px;
+  border-radius: 2rem 1rem 2rem 1rem;
+}
+.s-044137:not(#_s):not(#_s):not(#_s) {
+  display: flex;
+  gap: var(--space-6);
+}
+.s-91f63f:not(#_s):not(#_s):not(#_s) {
+  padding: 2rem;
+}
+.s-be70d9:not(#_s):not(#_s):not(#_s) {
+  width: 100%;
+}
+.s-5b2b87:not(#_s):not(#_s):not(#_s) {
+  padding: 2rem;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+.s-cffaa4:not(#_s):not(#_s):not(#_s) {
+  padding: 1.25rem;
+}
+.s-a9126b:not(#_s):not(#_s):not(#_s) {
+  min-height: 300px;
+  border-radius: var(--radius-2xl);
+}
+.s-6d916c:not(#_s):not(#_s):not(#_s) {
+  min-height: 140px;
+  border: none;
+  border-radius: 0;
+}
+.s-082588:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 3rem;
+}
+.s-ac96e5:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+.s-da7c21:not(#_s):not(#_s):not(#_s) {
+  color: #ffd400;
+}
+.s-2ff9f7:not(#_s):not(#_s):not(#_s) {
+  margin-inline: auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+.s-86d09c:not(#_s):not(#_s):not(#_s) {
+  color: white;
+  margin-bottom: var(--space-10);
+  display: flex;
+}
+.s-b38a50:not(#_s):not(#_s):not(#_s) {
+  margin-top: var(--space-4);
+}
+.s-fb4174:not(#_s):not(#_s):not(#_s) {
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.s-9c7663:not(#_s):not(#_s):not(#_s) {
+  display: none;
+}
+.s-83cc3f:not(#_s):not(#_s):not(#_s) {
+  width: auto;
+  padding: 0.5rem 1rem;
+}
+.s-2d0d28:not(#_s):not(#_s):not(#_s) {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.s-4356ae:not(#_s):not(#_s):not(#_s) {
+  width: 65%;
+}
+.s-759002:not(#_s):not(#_s):not(#_s) {
+  width: 0%;
+}
+.s-8e0008:not(#_s):not(#_s):not(#_s) {
+  width: 40%;
+}
+.s-1c8ff2:not(#_s):not(#_s):not(#_s) {
+  padding: var(--space-6);
+}
+.s-1e5832:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.125rem;
+}
+.s-718c86:not(#_s):not(#_s):not(#_s) {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  font-family: var(--font-display);
+}
+.s-73bf47:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-gray-600);
+  margin-bottom: 1rem;
+}
+.s-e109d6:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-gray-600);
+  margin: 0;
+}
+.s-10f123:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.s-e422cc:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-gray-600);
+}
+.s-da0933:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 1rem;
+  color: var(--color-gray-600);
+}
+.s-327cbb:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  color: var(--color-gray-600);
+}
+.s-f8e706:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+.s-0891f1:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+.s-fa817a:not(#_s):not(#_s):not(#_s) {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+.s-3214dc:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.s-55cbe3:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+.s-7e8d1d:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.s-0be4c7:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+}
+.s-bb49f5:not(#_s):not(#_s):not(#_s) {
+  margin-bottom: 0.75rem;
+}
+.s-3a5338:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+.s-39b8d3:not(#_s):not(#_s):not(#_s) {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.s-8d294f:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.s-93d1d3:not(#_s):not(#_s):not(#_s) {
+  font-weight: 600;
+}
+.s-aa90bb:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+}
+.s-97dd92:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-black);
+  margin-bottom: var(--space-4);
+}
+.s-67d250:not(#_s):not(#_s):not(#_s) {
+  color: var(--color-gray-600);
+  max-width: 480px;
+  margin-bottom: var(--space-8);
+}
+.s-59ee07:not(#_s):not(#_s):not(#_s) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.s-afe440:not(#_s):not(#_s):not(#_s) {
+  width: 48px;
+  height: 48px;
+  background: var(--color-accent);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.s-5921c7:not(#_s):not(#_s):not(#_s) {
+  width: 48px;
+  height: 48px;
+  background: #0a0a0a;
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.s-0395be:not(#_s):not(#_s):not(#_s) {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-800);
+}
+.s-b3ae6b:not(#_s):not(#_s):not(#_s) {
+  margin: 1.1rem 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.s-9d144f:not(#_s):not(#_s):not(#_s) {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+.s-833869:not(#_s):not(#_s):not(#_s) {
+  font-size: 1rem;
+}
+.s-30d1f7:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--color-gray-600);
+}
+.s-f65820:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+.s-ec6591:not(#_s):not(#_s):not(#_s) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.s-31628a:not(#_s):not(#_s):not(#_s) {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+.s-15b678:not(#_s):not(#_s):not(#_s) {
+  padding: 0.6rem 0;
+}
+.s-a1dac7:not(#_s):not(#_s):not(#_s) {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.s-e9322b:not(#_s):not(#_s):not(#_s) {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 1rem;
+}
+.s-8e9fbd:not(#_s):not(#_s):not(#_s) {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.25rem;
+}
+.s-7023da:not(#_s):not(#_s):not(#_s) {
+  text-align: center;
+}
+.s-9be61a:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  margin-top: 0.25rem;
+}
+.s-75ff59:not(#_s):not(#_s):not(#_s) {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.s-a75d0c:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  margin-bottom: 1rem;
+}
+.s-67e07a:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--color-black);
+}
+.s-3439d9:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.85rem;
+  color: var(--color-gray-600);
+  margin-bottom: 0.5rem;
+}
+.s-0e8fc9:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.s-0ddff1:not(#_s):not(#_s):not(#_s) {
+  text-align: center;
+  margin-top: 2rem;
+}
+.s-edf79e:not(#_s):not(#_s):not(#_s) {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.s-2d67d4:not(#_s):not(#_s):not(#_s) {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  font-family: var(--font-display);
+}
+.s-df2552:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+.s-35dd88:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  margin-bottom: 1.25rem;
+}
+.s-5dc6c0:not(#_s):not(#_s):not(#_s) {
+  font-size: 2rem;
+  font-weight: 650;
+  margin-bottom: 1rem;
+}
+.s-8f306c:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.s-949e6d:not(#_s):not(#_s):not(#_s) {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+}
+.s-131a16:not(#_s):not(#_s):not(#_s) {
+  padding: 0.35rem 0;
+}
+.s-86c82b:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+.s-157c03:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+.s-b6a9c5:not(#_s):not(#_s):not(#_s) {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+}
+.s-6f1a9c:not(#_s):not(#_s):not(#_s) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--color-gray-600);
+}
+.s-dbf35e:not(#_s):not(#_s):not(#_s) {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+.s-e64205:not(#_s):not(#_s):not(#_s) {
+  padding: 0.5rem 0;
+}
+.s-f03969:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.95rem;
+}
+.s-3a7de2:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.s-2e1b2a:not(#_s):not(#_s):not(#_s) {
+  color: #ffffff;
+}
+.s-50b7da:not(#_s):not(#_s):not(#_s) {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-1);
+}
+.s-56d7c4:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  color: var(--color-gray-800);
+}
+.s-211dd8:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-2);
+}
+.s-349c5e:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.8125rem;
+  margin-top: var(--space-2);
+}
+.s-0c2cfb:not(#_s):not(#_s):not(#_s) {
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.s-5ab9ea:not(#_s):not(#_s):not(#_s) {
+  margin: 0;
+  font-size: 1.125rem;
+}
+.s-c7756c:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.8125rem;
+  margin-left: 4px;
+}
+.s-a19567:not(#_s):not(#_s):not(#_s) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.s-b8f0bb:not(#_s):not(#_s):not(#_s) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+}
+.s-ab209c:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.875rem;
+}
+.s-e2dabe:not(#_s):not(#_s):not(#_s) {
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-4);
+}
+
+/* ==========================================================
+   Nav alignment fix — small desktops / 1024px laptops
+   Links were wrapping mid-word ("Progra/ms"), logo split in two.
+   ========================================================== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .header .header-inner:not(#_n) { gap: 10px; flex-wrap: nowrap; }
+  .header .logo:not(#_n) { white-space: nowrap; flex-shrink: 0; font-size: 1rem; gap: 8px; }
+  .header .nav:not(#_n) {
+    flex: 1 1 auto; min-width: 0; justify-content: center;
+    gap: 2px; flex-wrap: nowrap;
+  }
+  .header .nav-item:not(#_n) { flex-shrink: 0; }
+  .header .nav-link:not(#_n) {
+    white-space: nowrap; flex-shrink: 0;
+    padding: 7px 8px !important; font-size: 0.8125rem !important;
+    line-height: 1.2; display: inline-flex; align-items: center;
+  }
+  .header .header-actions:not(#_n) { flex-shrink: 0; gap: 6px; }
+  .header .header-actions .theme-toggle:not(#_n),
+  .header .header-actions .rtl-toggle:not(#_n),
+  .header .header-actions .menu-toggle:not(#_n) { width: 36px; height: 36px; min-width: 36px; padding: 0; }
+  .header .header-login-btn:not(#_n) { padding: 0 14px !important; height: 36px; white-space: nowrap; }
+}
+
+/* ==========================================================
+   Home banner — let height follow content (was fixed 650px,
+   which pushed the label under the header and clipped buttons)
+   ========================================================== */
+.hero-home1.animated-page-hero.page-hero-home:not(#_h) { height: auto !important; min-height: 650px !important; }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-home1.animated-page-hero.page-hero-home:not(#_h) {
+    padding: 118px 0 64px !important;
+    align-items: center;
+  }
+  .page-hero-home:not(#_h) > .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 32px !important; box-sizing: border-box; }
+  .page-hero-home:not(#_h) .grid { grid-template-columns: 1.08fr .92fr !important; gap: 40px !important; align-items: center; }
+  .page-hero-home:not(#_h) .grid > * { min-width: 0; }
+  .page-hero-home:not(#_h) .section-label { margin-bottom: 18px; font-size: .7rem; }
+  .page-hero-home:not(#_h) h1 { font-size: clamp(2.6rem, 4.6vw, 3.3rem) !important; line-height: 1.05 !important; margin-bottom: 18px !important; }
+  .page-hero-home:not(#_h) .section-desc { font-size: 1.02rem !important; line-height: 1.6 !important; margin-bottom: 20px !important; max-width: 46ch; }
+  .page-hero-home:not(#_h) .check-list { margin-bottom: 26px !important; }
+  .page-hero-home:not(#_h) .check-list li { font-size: .95rem; margin-bottom: 8px; }
+  .page-hero-home:not(#_h) .s-a18642 { flex-wrap: nowrap !important; gap: 12px !important; }
+  .page-hero-home:not(#_h) .s-a18642 .btn { white-space: nowrap; padding: 0 22px !important; height: 52px; font-size: .95rem !important; display: inline-flex; align-items: center; }
+  .page-hero-home:not(#_h) .image-box { width: 100% !important; max-width: 100% !important; min-height: 0 !important; height: auto !important; aspect-ratio: 5 / 4; box-sizing: border-box; }
+  .page-hero-home:not(#_h) .image-box img { width: 100%; height: 100%; object-fit: cover; }
+}
+/* Full-bleed overlay must not scale (old orb float left an uncovered strip on the right) */
+.hero-home1.animated-page-hero.page-hero-home:not(#_h)::before { animation: none !important; transform: none !important; inset: 0 !important; }

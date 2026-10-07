@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <polygon points="32,1 61,17 61,47 32,63 3,47 3,17" fill="#ffd400"/>
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
+        font-family="Inter, Arial, Helvetica, sans-serif" font-weight="800"
+        font-size="24" letter-spacing="-0.5" fill="#0a0a0a">VQ</text>
+</svg>

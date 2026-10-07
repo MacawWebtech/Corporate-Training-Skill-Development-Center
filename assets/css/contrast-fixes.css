@@ -1,0 +1,144 @@
+/* =========================================================
+   CONTRAST FIXES — light ("normal") mode text visibility
+   Loaded LAST on every page.
+
+   Two root causes in qa-theme.css:
+   1. A blanket light-mode rule forces every h1–h6/p/li/span/strong
+      inside page sections to #0a0a0a !important. That also hits
+      components that stay DARK in light mode, so their text went
+      black-on-black.
+   2. Brand yellow (#ffd400) used as TEXT colour, which only reads
+      on dark backgrounds; on white it's ~1.4:1.
+
+   The prefix  :root:not([data-theme="dark"]):not(#_)  limits every
+   rule to light mode and adds ID-level specificity so it wins over
+   the blanket rule without touching qa-theme.css. Dark mode is
+   unaffected.
+   ========================================================= */
+
+:root { --accent-ink: #7a5f00; } /* readable gold on light surfaces (6:1 on white) */
+
+/* ---------- 1. Dark panels in light mode: light text ---------- */
+/* :where() keeps this rule at the prefix's specificity (still enough to
+   beat the blanket rule) so the targeted exceptions below always win. */
+:root:not([data-theme="dark"]):not(#_) :where(
+  .corp-impact, .corp-contact-band, .auth-intro, .trust-modern,
+  .contact-page .contact-form-card
+) :where(h1, h2, h3, h4, h5, h6, p, li, span, strong, b, label, div) {
+  color: #ffffff !important;
+}
+/* secondary copy inside those panels */
+:root:not([data-theme="dark"]):not(#_) :is(.corp-impact .corp-metric span,
+  .auth-intro .auth-points div, .corp-contact-band p,
+  .contact-page .contact-form-card .form-intro) {
+  color: rgba(255, 255, 255, .72) !important;
+}
+/* accents inside dark panels stay brand yellow */
+:root:not([data-theme="dark"]):not(#_) :is(
+  .corp-impact, .corp-contact-band, .auth-intro, .trust-modern
+) :is(.corp-kicker, .text-accent, .stat-big, [class*="val"]) {
+  color: #ffd400 !important;
+}
+/* keep form inputs readable inside the dark contact card */
+:root:not([data-theme="dark"]):not(#_) .contact-page .contact-form-card :is(input, select, textarea) {
+  color: #0a0a0a !important;
+}
+/* buttons inside dark panels keep their own dark-on-yellow text */
+:root:not([data-theme="dark"]):not(#_) :is(
+  .corp-impact, .corp-contact-band, .auth-intro, .trust-modern, .contact-form-card
+) .btn-primary, :root:not([data-theme="dark"]):not(#_) :is(
+  .corp-impact, .corp-contact-band, .auth-intro, .trust-modern, .contact-form-card
+) .btn-primary * {
+  color: #0a0a0a !important;
+}
+
+/* ---------- 2. Client/industry tags: black pill, yellow text ---------- */
+:root:not([data-theme="dark"]):not(#_) .vq-tag {
+  background: #0a0a0a !important;
+  color: #ffd400 !important;
+}
+
+/* ---------- 3. Badges & chips: dark text on solid yellow ----------
+   Were yellow text on pale-yellow or white. */
+:root:not([data-theme="dark"]):not(#_) :is(.badge, .recog-badge, .journey-icon) {
+  background: #ffd400 !important;
+  color: #0a0a0a !important;
+  border-color: #ffd400 !important;
+}
+
+/* ---------- 4. Yellow numbers, metrics & links on white → gold ink ---------- */
+:root:not([data-theme="dark"]):not(#_) :is(
+  .u-accent-ink,   /* 404, methodology 01–04, client case metrics */
+  .journey-num,
+  .outcome-val,
+  .unique-next-steps b,
+  .unique-sprint-track b,
+  .unique-cycle b,
+  .unique-pricing-factors b,
+  .unique-roadmap-list b,
+  main section:not(.animated-page-hero):not(.hero) a[href^="mailto:"],
+  .auth-meta a
+) {
+  color: var(--accent-ink) !important;
+}
+/* any remaining <b> label in the "unique" sections that was yellow */
+:root:not([data-theme="dark"]):not(#_) .apex-unique-section b {
+  color: var(--accent-ink) !important;
+}
+
+/* Programs sidebar: active category was yellow text on white */
+:root:not([data-theme="dark"]):not(#_) .cat-item.active {
+  color: #0a0a0a !important;
+  background: #ffd400 !important;
+}
+:root:not([data-theme="dark"]):not(#_) .cat-item.active svg { stroke: #0a0a0a !important; }
+
+/* ---------- 5. Both modes: small fixes ---------- */
+/* Contact icon tiles: white icon on yellow was faint */
+.u-accent-tile { color: #0a0a0a !important; }
+/* Keyboard "Skip to content" link: white on yellow */
+.skip-link { color: #0a0a0a !important; }
+
+/* ---------- 6. Follow-ups found by the audit ---------- */
+/* White card sitting inside the dark contact band keeps dark text */
+:root:not([data-theme="dark"]):not(#_) .corp-contact-band .corp-contact-card :is(strong, span, p, b) {
+  color: #0a0a0a !important;
+}
+:root:not([data-theme="dark"]):not(#_) .corp-contact-band .corp-contact-card span {
+  color: #444444 !important;
+}
+/* Yellow circles / yellow buttons inside dark panels: dark glyphs */
+:root:not([data-theme="dark"]):not(#_) .auth-intro .auth-points li > span,
+:root:not([data-theme="dark"]):not(#_) :is(
+  .corp-impact, .corp-contact-band, .auth-intro, .trust-modern,
+  .contact-page .contact-form-card
+) .btn-primary :is(span, svg) {
+  color: #0a0a0a !important;
+}
+/* Enterprise page: academy card turns white in light mode, stats were white */
+:root:not([data-theme="dark"]):not(#_) .academy-stats .val { color: #0a0a0a !important; }
+:root:not([data-theme="dark"]):not(#_) .academy-stats .lbl { color: #555555 !important; }
+/* Login: "Back to VioraQuest" link */
+:root:not([data-theme="dark"]):not(#_) .auth-back a { color: var(--accent-ink) !important; }
+
+/* Badges size to their label instead of stretching the full card width
+   (both modes, so light and dark stay consistent). */
+.badge { width: fit-content !important; max-width: 100%; }
+
+/* ---------- 7. Photo article cards (Insights page) ----------
+   Text sits on a dark photo + black gradient, so it must stay light
+   in light mode too. The blanket rule was turning it #0a0a0a. */
+:root:not([data-theme="dark"]):not(#_) .corp-article-card :is(h3, p) {
+  color: #ffffff !important;
+}
+:root:not([data-theme="dark"]):not(#_) .corp-article-card p {
+  color: rgba(255, 255, 255, .82) !important;
+}
+:root:not([data-theme="dark"]):not(#_) .corp-article-card .corp-kicker {
+  color: #ffd400 !important;
+}
+/* Stronger scrim so white text holds on bright photos */
+.corp-article-card .overlay {
+  background: linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 55%, rgba(0,0,0,0) 100%) !important;
+  padding-top: 3rem !important;
+}

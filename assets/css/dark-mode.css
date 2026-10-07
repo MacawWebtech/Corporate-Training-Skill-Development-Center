@@ -1,0 +1,88 @@
+/* VioraQuest dark mode — strict Three Color Rule: black, white, unique yellow. */
+[data-theme="dark"] body { background: #0a0a0a; color: #ffffff; }
+[data-theme="dark"] .header,
+[data-theme="dark"] .nav-dropdown,
+[data-theme="dark"] .mobile-menu { background: #0a0a0a !important; border-color: rgba(255, 212, 0, .55) !important; }
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span,
+[data-theme="dark"] strong,
+[data-theme="dark"] label,
+[data-theme="dark"] .section-desc,
+[data-theme="dark"] .nav-link,
+[data-theme="dark"] .mobile-nav-link,
+[data-theme="dark"] .logo { color: #ffffff; }
+[data-theme="dark"] .section-label,
+[data-theme="dark"] .apex-extra-kicker,
+[data-theme="dark"] .badge,
+[data-theme="dark"] .text-accent,
+[data-theme="dark"] main a:not(.btn) { color: #ffd400 !important; }
+[data-theme="dark"] .card,
+[data-theme="dark"] .prog-card,
+[data-theme="dark"] .t-card,
+[data-theme="dark"] .outcome-card,
+[data-theme="dark"] .journey-card,
+[data-theme="dark"] .recog-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .table-card,
+[data-theme="dark"] .advantage-item,
+[data-theme="dark"] .topic-panel,
+[data-theme="dark"] .cat-panel { background: rgba(10, 10, 10, .72) !important; border-color: rgba(255, 212, 0, .55) !important; }
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-textarea,
+[data-theme="dark"] .form-select { background: #0a0a0a !important; border-color: #ffd400 !important; color: #ffffff !important; }
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder { color: rgba(255, 255, 255, .72) !important; }
+[data-theme="dark"] .animated-page-hero,
+[data-theme="dark"] .page-hero-contact { color: #ffffff; }
+
+
+/* Why VioraQuest: black dark-mode background and visible white numbers */
+[data-theme="dark"] .why-vioraquest-section {
+  background: #0a0a0a !important;
+}
+[data-theme="dark"] .why-vioraquest-section .adv-icon {
+  color: #ffffff !important;
+}
+
+/* Final page canvas theme: every page uses a white canvas in Light mode and black canvas in Dark mode. */
+body,
+main,
+.auth-page {
+  background: #ffffff !important;
+}
+[data-theme="dark"] body,
+[data-theme="dark"] main,
+[data-theme="dark"] .auth-page {
+  background: #000000 !important;
+}
+
+/* Keep ordinary content sections on the page canvas while preserving image/hero sections. */
+[data-theme="light"] main > section:not(.hero):not(.hero-home1):not(.animated-page-hero):not(.page-hero),
+[data-theme="light"] main .section:not(.animated-page-hero),
+[data-theme="light"] .apex-extra-section,
+[data-theme="light"] .apex-unique-section {
+  background-color: #ffffff !important;
+}
+[data-theme="dark"] main > section:not(.hero):not(.hero-home1):not(.animated-page-hero):not(.page-hero),
+[data-theme="dark"] main .section:not(.animated-page-hero),
+[data-theme="dark"] .apex-extra-section,
+[data-theme="dark"] .apex-unique-section {
+  background-color: #000000 !important;
+}
+
+/* The site also supports an unset theme before JavaScript initializes. */
+html:not([data-theme]) body,
+html:not([data-theme]) main {
+  background: #ffffff !important;
+}
+[data-theme="dark"] .apex-extra-section,
+[data-theme="dark"] .apex-extra-section.alt {
+  background: #000000 !important;
+}

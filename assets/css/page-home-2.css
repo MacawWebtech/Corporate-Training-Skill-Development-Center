@@ -1,0 +1,149 @@
+/* Page styles for pages/home-2.html (moved out of the HTML <style> block) */
+
+.hero-studio {
+  padding-top: calc(var(--header-height) + 5rem);
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.hero-studio h1 {
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  max-width: 16ch;
+  margin-inline: auto;
+  color: var(--color-black);
+}
+.recog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 700px) {
+  .recog-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.recog-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-black);
+  transition: all 0.35s var(--ease-apple);
+}
+.recog-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+/* Crossfade — always dark panel (both themes) */
+.crossfade-section {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  background: #0a0a0a;
+  color: #ffffff;
+}
+.crossfade-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .crossfade-slide { grid-template-columns: 1fr 1fr; }
+}
+.crossfade-slide.active { opacity: 1; z-index: 1; }
+.crossfade-text {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #0a0a0a;
+}
+.crossfade-text h3 { color: #ffffff !important; }
+.crossfade-text p { color: rgba(255, 255, 255, 0.72) !important; }
+.crossfade-visual {
+  background: #0a0a0a;
+  min-height: 240px;
+}
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 700px) {
+  .industry-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1000px) {
+  .industry-grid { grid-template-columns: repeat(6, 1fr); }
+}
+.industry-chip {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-black);
+  transition: all 0.3s var(--ease-apple);
+}
+.industry-chip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+.academy-card {
+  background: linear-gradient(135deg, #0a0a0a 0%, #0a0a0a 100%);
+  border-radius: var(--radius-2xl);
+  padding: 2.5rem;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .academy-card { grid-template-columns: 1.2fr 1fr; }
+}
+.academy-card h2 { color: #ffffff !important; }
+.academy-card p { color: rgba(255, 255, 255, 0.75) !important; }
+.academy-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.academy-stats div { text-align: left; }
+.academy-stats .val {
+  font-size: 1.5rem;
+  font-weight: 650;
+  color: #ffffff;
+}
+.academy-stats .lbl {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Dark mode safety for Home 2 surface cards */
+[data-theme="dark"] .recog-item,
+[data-theme="dark"] .industry-chip {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-200);
+  color: var(--color-black);
+}
+[data-theme="dark"] .hero-studio h1 {
+  color: var(--color-black);
+}
+[data-theme="dark"] .crossfade-section,
+[data-theme="dark"] .crossfade-text {
+  background: #0a0a0a;
+}
+[data-theme="dark"] .crossfade-visual {
+  background: #0a0a0a;
+}

@@ -1,0 +1,77 @@
+/* VioraQuest layout mirror mode
+   RTL/LTR toggles the position/order of content blocks only.
+   English text, form values and table text intentionally stay left-aligned. */
+
+[dir="rtl"] body {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Mirror the main header content without reversing the logo text itself. */
+[dir="rtl"] .header-inner { flex-direction: row-reverse; }
+[dir="rtl"] .nav { flex-direction: row-reverse; }
+[dir="rtl"] .header-actions { flex-direction: row-reverse; }
+
+/* Dropdown follows the mirrored navigation item, but its text remains left aligned. */
+[dir="rtl"] .nav-dropdown {
+  left: auto;
+  right: 0;
+  text-align: left;
+  direction: ltr;
+}
+
+/* Mirror grid column placement while preserving normal text direction in every card. */
+[dir="rtl"] .grid,
+[dir="rtl"] .footer-top,
+[dir="rtl"] .footer-links-row,
+[dir="rtl"] .footer-newsletter {
+  direction: rtl;
+}
+[dir="rtl"] .grid > *,
+[dir="rtl"] .footer-top > *,
+[dir="rtl"] .footer-links-row > *,
+[dir="rtl"] .footer-newsletter > * {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Mirror large horizontal content groups only; do not alter text alignment. */
+@media (min-width: 768px) {
+  [dir="rtl"] .cta-inner { flex-direction: row-reverse; }
+}
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom .flex { flex-direction: row-reverse; }
+
+/* Keep controls and readable content exactly like LTR. */
+[dir="rtl"] .logo,
+[dir="rtl"] .btn,
+[dir="rtl"] .form-group,
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea,
+[dir="rtl"] th,
+[dir="rtl"] td,
+[dir="rtl"] p,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] a,
+[dir="rtl"] label {
+  direction: ltr;
+}
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-textarea,
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: left;
+}
+
+/* Mobile panel still enters from the opposite side in mirrored mode. */
+[dir="rtl"] .mobile-menu { transform: translateX(-100%); }
+[dir="rtl"] .mobile-menu.open { transform: translateX(0); }
+[dir="rtl"] .mobile-nav-link { text-align: left; direction: ltr; }
+
+/* Utility centered text must remain centered in both modes. */
+[dir="rtl"] .text-center { text-align: center; }

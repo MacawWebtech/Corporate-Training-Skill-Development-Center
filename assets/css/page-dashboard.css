@@ -1,0 +1,210 @@
+/* Page styles for dashboard/index.html (moved out of the HTML <style> block) */
+
+/* Dashboard specific */
+.dash-layout {
+  min-height: 100dvh;
+}
+.dash-sidebar {
+  width: 280px;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: var(--space-6);
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, .2) transparent;
+}
+.dash-main {
+  min-width: 0;
+  min-height: 100dvh;
+  margin-inline-start: 280px;
+}
+@media (max-width: 1023px) {
+  .dash-sidebar { display: none; width: min(86vw, 320px); box-shadow: 24px 0 60px rgba(10, 10, 10, .28); }
+  .dash-sidebar.open { display: flex; position: fixed; inset-block: 0; inset-inline-start: 0; z-index: 1100; }
+  .dash-main { margin-inline-start: 0; }
+}
+.dash-nav a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  transition: all var(--transition-fast);
+}
+.dash-nav a:hover, .dash-nav a.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+.dash-main {
+  padding: var(--space-6);
+  background:
+    radial-gradient(circle at 92% 3%, rgba(255, 212, 0, .08), transparent 26rem),
+    var(--color-gray-50);
+}
+.dash-sidebar .logo {
+  color: #ffffff !important;
+  flex: 0 0 auto;
+}
+.dash-nav { flex: 0 0 auto; }
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: var(--space-8);
+  display: grid;
+  gap: var(--space-3);
+}
+.sidebar-panel {
+  padding: var(--space-4);
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, .055);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05);
+}
+.sidebar-panel-title {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: rgba(255, 255, 255, .52);
+  margin-bottom: .7rem;
+}
+.sidebar-metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  color: rgba(255, 255, 255, .78);
+  font-size: .82rem;
+  padding: .32rem 0;
+}
+.sidebar-metric strong { color: #ffffff; font-size: .86rem; }
+.sidebar-status {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: .8rem;
+  color: rgba(255, 255, 255, .72);
+}
+.sidebar-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ffd400;
+  box-shadow: 0 0 0 4px rgba(255, 212, 0, .12);
+}
+.stat-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.table-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.status-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.status-completed { background: rgba(255, 212, 0, .13); color: #0a0a0a; }
+.status-inprogress { background: rgba(255, 212, 0, .12); color: #ffd400; }
+.status-upcoming { background: var(--color-gray-100); color: var(--color-gray-800); }
+.dash-main .theme-toggle,
+.dash-main .dashboard-control {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-gray-600);
+  border: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+.dash-main .theme-toggle:hover,
+.dash-main .dashboard-control:hover {
+  background: var(--color-gray-100);
+  color: var(--color-black);
+}
+.stat-card, .table-card {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.table-card th { background: color-mix(in srgb, var(--color-gray-50) 84%, transparent); }
+.table-card tbody tr { transition: background-color .2s ease; }
+.table-card tbody tr:hover { background: var(--color-accent-soft); }
+.table-card select { min-width: 145px; }
+[data-theme="dark"] .dash-main {
+  background:
+    radial-gradient(circle at 92% 3%, rgba(255, 212, 0, .14), transparent 26rem),
+    #0a0a0a;
+}
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .table-card {
+  background: #0a0a0a;
+  border-color: #0a0a0a !important;
+  color: #ffffff;
+}
+[data-theme="dark"] .stat-card > div:first-child,
+[data-theme="dark"] .table-card p,
+[data-theme="dark"] .table-card span:not(.badge):not(.status-pill) { color: #ffffff !important; }
+[data-theme="dark"] .table-card th { background: #0a0a0a; color: #ffffff; }
+[data-theme="dark"] .table-card td { border-bottom-color: #0a0a0a; color: #ffffff; }
+[data-theme="dark"] .table-card tbody tr:hover { background: rgba(255, 212, 0, .10); }
+[data-theme="dark"] .table-card > div.s-b8f0bb { background: #0a0a0a !important; }
+[data-theme="dark"] .status-completed { background: rgba(255, 212, 0, .15); color: #ffd400; }
+[data-theme="dark"] .status-inprogress { background: rgba(255, 212, 0, .18); color: #ffd400; }
+[data-theme="dark"] .status-upcoming { background: #0a0a0a; color: #ffffff; }
+[data-theme="dark"] .dash-main .theme-toggle,
+[data-theme="dark"] .dash-main .dashboard-control { background: #0a0a0a; border-color: #0a0a0a; color: #ffffff; }
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select { background: #0a0a0a; border-color: #0a0a0a; color: #ffffff; }
+@media (max-width: 1023px) {
+  .dashboard-menu-toggle { display: flex !important; }
+}
+@media (max-width: 767px) {
+  .dash-main { padding: var(--space-4); }
+  .table-card > div.s-0c2cfb, .table-card > div.s-b8f0bb { align-items: stretch !important; }
+  .table-card select { width: 100% !important; min-width: 0; }
+}
+
+/* Requested transparent dashboard surfaces; keep heading/sidebar/toggle controls solid. */
+.dash-main { background: transparent !important; }
+.dash-heading-bar {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-xs);
+}
+.stat-card, .table-card {
+  background: rgba(255, 255, 255, .30) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+[data-theme="dark"] .dash-main { background: transparent !important; }
+[data-theme="dark"] .dash-heading-bar { background: #0a0a0a; border-color: #0a0a0a; }
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .table-card { background: rgba(10, 10, 10, .42) !important; }
