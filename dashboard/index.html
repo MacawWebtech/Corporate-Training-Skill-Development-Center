@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Dashboard | VioraQuest Training Portal</title>
+  
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="description" content="Manage employee enrollments, track attendance and module completion, generate certificates, and view the training calendar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+<link rel="stylesheet" href="../assets/css/page-dashboard.css">
+<link rel="stylesheet" href="../assets/css/qa-theme.css">
+<link rel="stylesheet" href="../assets/css/responsive-fixes.css">
+<link rel="stylesheet" href="../assets/css/contrast-fixes.css">
+<link rel="stylesheet" href="../assets/css/extracted-styles.css">
+</head>
+<body>
+  <div class="dash-layout">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <a href="../pages/index.html" class="logo s-86d09c">
+        <span class="logo-icon">VQ</span>
+        <span>VioraQuest</span>
+      </a>
+      <nav class="dash-nav">
+        <a href="index.html" class="active">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+          Overview
+        </a>
+        <a href="#enrollments">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          Enrollments
+        </a>
+        <a href="#attendance">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Attendance
+        </a>
+        <a href="#progress">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Module Progress
+        </a>
+        <a href="#calendar">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Training Calendar
+        </a>
+        <a href="#certificates">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg>
+          Certificates
+        </a>
+        <a href="#reports">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Reports
+        </a>
+        <a class="s-b38a50" href="../pages/login.html">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          Logout
+        </a>
+      </nav>
+
+      <div class="sidebar-bottom" aria-label="Training snapshot">
+        <div class="sidebar-panel">
+          <div class="sidebar-panel-title">This month</div>
+          <div class="sidebar-metric"><span>Training hours</span><strong>426h</strong></div>
+          <div class="sidebar-metric"><span>Live cohorts</span><strong>9</strong></div>
+          <div class="sidebar-metric"><span>Avg. attendance</span><strong>93%</strong></div>
+        </div>
+        <div class="sidebar-panel">
+          <div class="sidebar-panel-title">Portal status</div>
+          <div class="sidebar-status"><span class="sidebar-status-dot"></span><span>All training systems operational</span></div>
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <div class="dash-main">
+      <div class="dash-heading-bar flex justify-between items-center mb-8 s-fb4174">
+        <div>
+          <h1 class="s-50b7da">HR Training Dashboard</h1>
+          <p class="s-56d7c4">Welcome back, Priya. Manage enrollments and track development.</p>
+        </div>
+        <div class="flex gap-3">
+          <button class="dashboard-menu-toggle dashboard-control s-9c7663" type="button" aria-label="Open dashboard menu" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <button class="theme-toggle" aria-label="Toggle theme"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+          <a href="#enroll" class="btn btn-primary btn-sm">+ Enroll Employees</a>
+        </div>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="stat-card">
+          <div class="s-211dd8">Active Enrollments</div>
+          <div class="stat-value">148</div>
+          <div class="s-349c5e">+12 this month</div>
+        </div>
+        <div class="stat-card">
+          <div class="s-211dd8">Completion Rate</div>
+          <div class="stat-value">87%</div>
+          <div class="s-349c5e">Across all modules</div>
+        </div>
+        <div class="stat-card">
+          <div class="s-211dd8">Upcoming Batches</div>
+          <div class="stat-value">6</div>
+          <div class="s-349c5e">Next 30 days</div>
+        </div>
+        <div class="stat-card">
+          <div class="s-211dd8">Certificates Issued</div>
+          <div class="stat-value">312</div>
+          <div class="s-349c5e">YTD</div>
+        </div>
+      </div>
+      
+      <!-- Enrollments Table -->
+      <div id="enrollments" class="table-card mb-8">
+        <div class="s-0c2cfb">
+          <h3 class="s-5ab9ea">Recent Enrollments</h3>
+          <div class="flex gap-2">
+            <select class="form-select s-83cc3f">
+              <option>All Departments</option>
+              <option>Sales</option>
+              <option>Engineering</option>
+              <option>Marketing</option>
+              <option>Operations</option>
+            </select>
+            <select class="form-select s-83cc3f">
+              <option>All Status</option>
+              <option>Completed</option>
+              <option>In Progress</option>
+              <option>Upcoming</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Program</th>
+                <th>Batch</th>
+                <th>Progress</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Arjun Patel</strong></td>
+                <td>Sales</td>
+                <td>Consultative Sales</td>
+                <td>Oct 14–16</td>
+                <td>
+                  <div class="progress-bar s-2d0d28">
+                    <div class="progress-fill s-be70d9"></div>
+                  </div>
+                  <span class="s-c7756c">100%</span>
+                </td>
+                <td><span class="status-pill status-completed">Completed</span></td>
+                <td><button class="btn btn-outline-accent btn-sm">Certificate</button></td>
+              </tr>
+              <tr>
+                <td><strong>Sara Kim</strong></td>
+                <td>Engineering</td>
+                <td>AI Fluency</td>
+                <td>Sep 22–24</td>
+                <td>
+                  <div class="progress-bar s-2d0d28">
+                    <div class="progress-fill s-4356ae"></div>
+                  </div>
+                  <span class="s-c7756c">65%</span>
+                </td>
+                <td><span class="status-pill status-inprogress">In Progress</span></td>
+                <td><button class="btn btn-secondary btn-sm">View</button></td>
+              </tr>
+              <tr>
+                <td><strong>James Okonkwo</strong></td>
+                <td>Operations</td>
+                <td>First-Time Manager</td>
+                <td>Nov 4–5</td>
+                <td>
+                  <div class="progress-bar s-2d0d28">
+                    <div class="progress-fill s-759002"></div>
+                  </div>
+                  <span class="s-c7756c">0%</span>
+                </td>
+                <td><span class="status-pill status-upcoming">Upcoming</span></td>
+                <td><button class="btn btn-secondary btn-sm">Manage</button></td>
+              </tr>
+              <tr>
+                <td><strong>Maria Santos</strong></td>
+                <td>Marketing</td>
+                <td>High-Impact Comm.</td>
+                <td>Oct 7–8</td>
+                <td>
+                  <div class="progress-bar s-2d0d28">
+                    <div class="progress-fill s-8e0008"></div>
+                  </div>
+                  <span class="s-c7756c">40%</span>
+                </td>
+                <td><span class="status-pill status-inprogress">In Progress</span></td>
+                <td><button class="btn btn-secondary btn-sm">View</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Calendar + Seats -->
+      <div id="calendar" class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="table-card s-1c8ff2">
+          <h3 class="mb-4 s-1e5832">Upcoming Batches & Seats</h3>
+          <div class="s-a19567">
+            <div class="s-b8f0bb">
+              <div>
+                <strong>Manager Essentials</strong><br>
+                <span class="s-ab209c">Oct 14–16 · Virtual</span>
+              </div>
+              <div class="s-28bbfa">
+                <span class="badge">12 seats left</span>
+              </div>
+            </div>
+            <div class="s-b8f0bb">
+              <div>
+                <strong>Executive Presence</strong><br>
+                <span class="s-ab209c">Nov 4–5 · Hybrid</span>
+              </div>
+              <div class="s-28bbfa">
+                <span class="badge">8 seats left</span>
+              </div>
+            </div>
+            <div class="s-b8f0bb">
+              <div>
+                <strong>Negotiation Lab</strong><br>
+                <span class="s-ab209c">Nov 18–19 · In-Person</span>
+              </div>
+              <div class="s-28bbfa">
+                <span class="badge">15 seats left</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="table-card s-1c8ff2">
+          <h3 class="mb-4 s-1e5832">Quick Enroll</h3>
+          <form data-validate>
+            <div class="form-group">
+              <label class="form-label">Employee / Team</label>
+              <input type="text" class="form-input" placeholder="Search employee or select team" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Program</label>
+              <select class="form-select" required>
+                <option value="">Select program</option>
+                <option>Executive Leadership Accelerator</option>
+                <option>High-Impact Communication</option>
+                <option>Consultative Sales Mastery</option>
+                <option>AI Fluency for Teams</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Batch Date</label>
+              <select class="form-select" required>
+                <option value="">Select batch</option>
+                <option>Oct 14–16 (12 seats)</option>
+                <option>Nov 4–5 (8 seats)</option>
+                <option>Nov 18–19 (15 seats)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Department</label>
+              <select class="form-select">
+                <option>Sales</option>
+                <option>Engineering</option>
+                <option>Marketing</option>
+                <option>Operations</option>
+                <option>HR</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary s-be70d9">Enroll Now</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Certificates -->
+      <div id="certificates" class="table-card s-1c8ff2">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="s-5ab9ea">Generate Certificates</h3>
+          <button class="btn btn-primary btn-sm">Bulk Download</button>
+        </div>
+        <p class="s-e2dabe">Select completed enrollments to generate and download certificates.</p>
+        <div class="flex gap-3 s-a18642">
+          <button class="btn btn-outline-accent btn-sm">Arjun Patel — Consultative Sales</button>
+          <button class="btn btn-outline-accent btn-sm">Neha Gupta — Leadership Accel.</button>
+          <button class="btn btn-secondary btn-sm">+ More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

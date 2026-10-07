@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up | VioraQuest</title>
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/images/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="description" content="Create your VioraQuest account to access programs, learning activity and your dashboard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/dark-mode.css">
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/responsive-fixes.css">
+<link rel="stylesheet" href="../assets/css/contrast-fixes.css">
+<link rel="stylesheet" href="../assets/css/extracted-styles.css">
+</head>
+<body>
+<main class="auth-page">
+  <div class="auth-shell">
+    <div class="auth-brand">
+      <a href="index.html" class="logo"><span class="logo-icon">VQ</span><span>VioraQuest</span></a>
+    </div>
+
+    <section class="auth-card" aria-label="Create account">
+      <aside class="auth-intro">
+        <div class="auth-intro-top">
+          <div class="auth-kicker">Join the portal</div>
+          <h2>Start strong.<br><em>Grow faster.</em></h2>
+          <p>Create your account to enrol in programs, track your learning and get a personal dashboard from day one.</p>
+        </div>
+        <ul class="auth-points">
+          <li><span>✓</span><div><strong>Quick setup</strong><br>Sign up with your work email or company account.</div></li>
+          <li><span>✓</span><div><strong>Curated programs</strong><br>Browse and enrol in training built for your role.</div></li>
+          <li><span>✓</span><div><strong>Track progress</strong><br>See your learning milestones in one place.</div></li>
+        </ul>
+        <div class="auth-stat"><b>01</b> Create account&nbsp;&nbsp; · &nbsp;&nbsp;<b>02</b> Choose programs&nbsp;&nbsp; · &nbsp;&nbsp;<b>03</b> Start learning</div>
+      </aside>
+
+      <div class="auth-form">
+        <div class="auth-form-head">
+          <div class="mini-label" >Get started</div>
+          <h3>Create your account</h3>
+          <p class="auth-subtitle">Join VioraQuest in under a minute and start your learning journey.</p>
+        </div>
+        <div class="auth-social" aria-label="Sign up with another account">
+          <button class="auth-social-btn" type="button" data-auth-provider="Google">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.45a5.52 5.52 0 0 1-2.4 3.62v3h3.88c2.27-2.09 3.57-5.17 3.57-8.81z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.94-2.92l-3.88-3c-1.07.72-2.45 1.15-4.06 1.15-3.12 0-5.77-2.11-6.71-4.95H1.28v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.29 14.28a7.2 7.2 0 0 1 0-4.56v-3.1H1.28a12 12 0 0 0 0 10.76l4.01-3.1z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.61 4.59 1.8l3.44-3.44A11.97 11.97 0 0 0 12 0 12 12 0 0 0 1.28 6.62l4.01 3.1C6.23 6.88 8.88 4.77 12 4.77z"/></svg>
+            <span>Google</span>
+          </button>
+          <button class="auth-social-btn" type="button" data-auth-provider="Microsoft">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F25022" d="M1 1h10.5v10.5H1z"/><path fill="#7FBA00" d="M12.5 1H23v10.5H12.5z"/><path fill="#00A4EF" d="M1 12.5h10.5V23H1z"/><path fill="#FFB900" d="M12.5 12.5H23V23H12.5z"/></svg>
+            <span>Microsoft</span>
+          </button>
+          <button class="auth-social-btn" type="button" data-auth-provider="SSO">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Company SSO</span>
+          </button>
+        </div>
+        <div class="auth-divider"><span>or sign up with email</span></div>
+        <form id="signupForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="signupName">Full name</label>
+            <input class="form-input" id="signupName" type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signupEmail">Work email</label>
+            <input class="form-input" id="signupEmail" type="email" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signupPassword">Create password</label>
+            <input class="form-input" id="signupPassword" type="password" placeholder="Minimum 4 characters" minlength="4" autocomplete="new-password" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signupConfirm">Confirm password</label>
+            <input class="form-input" id="signupConfirm" type="password" placeholder="Re-enter your password" minlength="4" autocomplete="new-password" required aria-describedby="signupConfirmError">
+            <p class="auth-field-error" id="signupConfirmError" role="alert"></p>
+          </div>
+          <button class="btn btn-primary auth-submit" type="submit">Create Account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+        <div class="auth-back"><a href="index.html">← Back to VioraQuest</a></div>
+      </div>
+    </section>
+  </div>
+</main>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/auth.js"></script>
+</body>
+</html>
